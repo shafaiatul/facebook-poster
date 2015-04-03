@@ -5,10 +5,10 @@ var cnv = document.getElementById("cnv1");
 var ctx = cnv.getContext("2d");
 //setting maximum line width, line height and x / y cordinates for text
 var maxWidth = cnv1.width - 10;
+var selected;
 var lineHeight = 22;
-
 var x_pos = 2;
-var y_pos = 15;
+var y_pos = 40;
 
 
 
@@ -46,14 +46,18 @@ var y_pos = 15;
             if (txtWidth > maxWidth){
               ctx.fillText(addtxt, x, y);
               addtxt = words[n] + " ";
-              y += lineHeight;
+                  if(selected > 30){
+                  y += lineHeight * 2.5;
+                 }else{
+                  y += lineHeight;
+                 }
             }
             else addtxt = txtLine;
           }
 
       //adding the text in canvas(set the text color, font type, size)
           
-          ctx.font = "bold 17px sans-serif";
+          ctx.font =  "bold"+" "+selected+"px"+" "+"sans-serif" ;
           ctx.fillText(addtxt, x, y);
 
       }
@@ -64,12 +68,18 @@ var y_pos = 15;
   });
 
   //Rendering a dropdown lost for font-size 
-   for (var i=1; i<=50; i++) {
+  
+   for (var i=12; i<=50; i++) {
         $(".fontSize").append($('<option></option>').val(i).html(i));
     }
+  $(".fontSize").change(function(){
+    selected = $(".fontSize option:selected").text();
+    alert(selected);
+    //alert(typeof(selected));
 
-
-
+  });
+  
+  
     
 
     
