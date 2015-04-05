@@ -1,3 +1,26 @@
-#cnv1{
-	border: 1px solid #000;
+/* Use Lato from Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+  width: 960px;
+  font-family: 'Lato', sans-serif;
+   margin: 0 auto;
+
+}
+
+#mycanvas{
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+textarea#typeHere{
+  height: 167px;
+  width: 350px;
+}
+
+.wrap{
+  position: absolute;
+  z-index: 100;
+  left: 850px;
+  top: 60px;
 }
