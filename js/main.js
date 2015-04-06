@@ -40,9 +40,6 @@
 		}
 		
 		context.fillText (addtxt, x, y);
-		
-		
-
 	}
 	
 	function bindEvents(){

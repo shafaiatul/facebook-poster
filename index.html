@@ -2,36 +2,51 @@
 <html>
 <head>
 	<title>Facebook Poster</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/spectrum.css">
   	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<!--Adding canvas to the page-->
-	<h1>Canvas</h1>
-    	<canvas id="mycanvas" width="600" height="500"></canvas>
+<!--Title-->
+	<p>Poster v.1</p>
+
 <!--Adding color picker to the page-->
 	
-	<div class="wrap">
-		<div >
-			<h2>Choose Text Color : </h2>
-			<input type='text' id="textColor" />
-		</div>
-		<div>
-			<h2>Choose Poster Color :</h2>
-			<input type='text' id="backgroundColor" />
-		</div>
+	<div class="row-first">
+		<section>
+			<label for="textColor">Choose Text Color &nbsp;:</label>
+			<input type='text' id="textColor" name="text_color" />
+		</section>
+		<section>
+			<label for="backgroundColor">Choose Poster Color &nbsp;:</label>
+			<input type='text' id="backgroundColor" name="background_color" />
+		</section>
 	<!--Adding font size-->
-		<div>
-			<h2>Choose Text Size :</h2>
-			<select id="fontSize"></select>
-		</div>
-		<div>
-			<h3>Type :</h3>
-		    <textarea id="typeHere" class="typeHere"></textarea>
-		</div>
+		<section>
+			<label for="fontSize">Choose Text Size &nbsp;:</label>
+			<select id="fontSize">
+				<optgroup label="Font Size">
+				</optgroup>
+			</select>
+		</section>
 	</div>
-<!--Adding text field to the page-->
+
+
+	<div class="row-second">
+		<section>
+		    <textarea id="typeHere" class="typeHere" placeholder="Type here..."></textarea>
+		</section>
 	
+<!--Adding canvas to the page-->
+		<section>
+    		<canvas id="mycanvas" class="mycanvas" width="600" height="315"></canvas>
+    	</section>
+	</div>
+
+	<div class="share">
+		<span>Share&nbsp;</span>
+		<a href="https://www.facebook.com/shafaiatul.islam" target="blank"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
+	</div>
 
   <script src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/spectrum.js"></script>

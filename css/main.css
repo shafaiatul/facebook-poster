@@ -5,22 +5,81 @@ body {
   width: 960px;
   font-family: 'Lato', sans-serif;
    margin: 0 auto;
+   box-sizing: border-box;
 
 }
 
-#mycanvas{
-  border: 2px solid #000;
-  border-radius: 5px;
+.mycanvas{
+  border: 1px solid #d3d3d3;
 }
 
-textarea#typeHere{
-  height: 167px;
-  width: 350px;
+p{
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
 }
 
-.wrap{
-  position: absolute;
-  z-index: 100;
-  left: 850px;
-  top: 60px;
+.row-first{
+  display: inline-block;
+}
+
+.row-first section{
+  float: left;
+  margin: 20px 85px;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.row-second{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.row-second section{
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+textarea{
+  width: 300px;
+  height: 311px;
+}
+
+.social-icon{
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  
+}
+
+span{
+  color: #2c3e50;
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 20px;
+
+}
+.share{
+  text-align: center;
+}
+
+
+/**
+ * Micro clearfix hack from Nicolas Gallagher
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
